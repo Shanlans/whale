@@ -202,31 +202,38 @@ class Sparse_data(object):
 
         self.class_to_id = {}
         self.image_to_id = {}
-        self.class_num = {}
         self.class_has_images = defaultdict(list)
-        self.other_class_has_images = {self.other_class:[]}
+
+
 
         self._sparse_data()
 
     def _sparse_data(self):
-
         self.class_to_id = {k:i for i,k in enumerate(self.image_to_class.values())}
-
         self.image_to_id = {k:self.class_to_id[v] for k,v in self.image_to_class.items()}
-
+        self.list_other_class = []
         for img,cls in self.image_to_class.items():
+            if cls == self.other_class:
+                self.list_other_class.append(img)
+            else:
+                self.class_has_images[cls].append(img)
 
-            # if cls == self.other_class:
-            #     self.other_class_has_images[self.other_class].append(img)
-            # else:
-            self.class_has_images[cls].append(img)
+        self.list_all_files = list(self.image_to_class.keys())
+        self.range_all_files = list(range(len(self.list_all_files)))
 
-        self.class_to_num = {k:len(v)for k,v in self.class_has_images.items()}
+        self.list_classes = list(set(self.image_to_class.values()))
+        self.range_list_classes = range(len(self.list_classes))
+        class_weight = np.array([len(self.class_has_images[class_]) for class_ in self.list_classes])
+        self.class_weight = class_weight / np.sum(class_weight)
 
-        self.class_weight = np.array([len(self.class_has_images[class_]) for class_ in self.list_classes])
+
 
     def _get_sample(self):
         class_idx = np.random.choice(self.range_list_classes, 1, p=self.class_weight)[0]
+        
+        examples_class_idx = np.random.choice(range(len(self.class_has_images[self.list_classes[class_idx]])), 2)
+        positive_example_1 = self.class_has_images[self.list_classes[class_idx]][examples_class_idx[0]]
+        positive_example_2 = self.class_has_images[self.list_classes[class_idx]][examples_class_idx[1]]
 
     def gen(self,batch_size):
         while True:

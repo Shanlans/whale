@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0964c741-ffc5-4557-9884-d1e4fcfc479b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_gen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +24,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="256" />
-          <entry key="py" value="4964" />
+          <entry key="py" value="5219" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5220" />
+          <entry key="Python" value="5475" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -66,12 +64,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/data_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="217" column="12" selection-start-line="217" selection-start-column="12" selection-end-line="217" selection-end-column="12" />
+            <state relative-caret-position="500">
+              <caret line="244" column="39" lean-forward="true" selection-start-line="244" selection-start-column="39" selection-end-line="244" selection-end-column="39" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1543830728792" expanded="true" signature="5878:7140" ph="..." />
-                <marker date="1543830728792" expanded="true" signature="7276:7371" ph="..." />
+                <marker date="1543831398462" expanded="true" signature="5878:7551" ph="..." />
+                <marker date="1543831398462" expanded="true" signature="7580:7999" ph="..." />
               </folding>
             </state>
           </provider>
@@ -355,12 +353,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="217" column="12" selection-start-line="217" selection-start-column="12" selection-end-line="217" selection-end-column="12" />
+        <state relative-caret-position="500">
+          <caret line="244" column="39" lean-forward="true" selection-start-line="244" selection-start-column="39" selection-end-line="244" selection-end-column="39" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1543830728792" expanded="true" signature="5878:7140" ph="..." />
-            <marker date="1543830728792" expanded="true" signature="7276:7371" ph="..." />
+            <marker date="1543831398462" expanded="true" signature="5878:7551" ph="..." />
+            <marker date="1543831398462" expanded="true" signature="7580:7999" ph="..." />
           </folding>
         </state>
       </provider>
