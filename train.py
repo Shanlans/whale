@@ -13,7 +13,7 @@ from src import *
 flags = tf.app.flags
 FLAGS = flags.FLAGS
 
-flags.DEFINE_string('data_dir','../data','dataset folder')
+flags.DEFINE_string('data_dir','./data','dataset folder')
 flags.DEFINE_integer('random_seed',666,'random seed for np,sklearn or others')
 
 # Training setting
@@ -28,10 +28,9 @@ def main(argv):
     train_ratio = FLAGS.train_ratio
     random_seed = FLAGS.random_seed
 
-    total_data = compare_old_new_data(old_data_dir='../last_data',new_data_dir=data_dir)
-
     train_dict,val_dict,test_dict,class_name = sparse_datacsv(data_dir=data_dir,
                                                      train_ratio=train_ratio,
+                                                    expand_training_data=False,
                                                     random_seed=random_seed)
 
 
