@@ -230,7 +230,7 @@ class Sparse_data(object):
 
     def _get_sample(self):
         class_idx = np.random.choice(self.range_list_classes, 1, p=self.class_weight)[0]
-        
+
         examples_class_idx = np.random.choice(range(len(self.class_has_images[self.list_classes[class_idx]])), 2)
         positive_example_1 = self.class_has_images[self.list_classes[class_idx]][examples_class_idx[0]]
         positive_example_2 = self.class_has_images[self.list_classes[class_idx]][examples_class_idx[1]]
